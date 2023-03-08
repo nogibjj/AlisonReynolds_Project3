@@ -1,7 +1,7 @@
 use polars::prelude::*;
 
 const WARNINGS: &str = "src/data/weather_alerts.csv";
-const WEATHER: &str = "src/data/era5land_1980_2022.txt";
+const WEATHER: &str = "src/data/era5land_1980_2022.csv";
 
 pub fn read_data() -> (DataFrame, DataFrame) {
     let warn_df = CsvReader::from_path(WARNINGS).unwrap().finish().unwrap();
